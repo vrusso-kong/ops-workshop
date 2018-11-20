@@ -1,0 +1,9 @@
+---
+applications:
+- name: opsman-bbl-workshop
+  memory: 512M
+  instances: 1
+  buildpacks: 
+  - staticfile_buildpack
+  random-route: true
+  path: workshopGen/public/

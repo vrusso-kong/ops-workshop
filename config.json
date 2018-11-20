@@ -1,0 +1,45 @@
+{
+    "workshopSubject":"Fiserv/THD OpsMan Deep Dive",
+    "workshopHomepage":"agenda.md",
+    "modules": [
+    {
+        "type": "concepts",
+        "content": [
+
+        ]
+    },
+    {
+        "type": "demos",
+        "content": [
+            {
+                "name":"BBL Up",
+                "filename":"azure-workshop/demos/bbl-up"
+            },
+            {
+              "name":"Deploy OpsMan",
+              "filename":"azure-workshop/demos/deploy-opsman-pipeline"
+            },
+            {
+                "name":"Create BOSH Release",
+                "filename":"azure-workshop/demos/create-bosh-release"
+            },
+            {
+                "name":"Deploy BOSH Release",
+                "filename":"azure-workshop/demos/deploy-bosh-release"
+            },
+            {
+                "name":"Example Stemcell",
+                "filename":"azure-workshop/demos/example-stemcell"
+            },
+            {
+                "name":"Service Broker Init",
+                "filename":"service-brokers/init"
+            },
+            {
+                "name":"Service Broker Catalog",
+                "filename":"service-brokers/catalog"
+            }
+        ]
+    }
+  ]
+}

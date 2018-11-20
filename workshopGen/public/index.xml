@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pivotal Workshop</title>
+    <link>/</link>
+    <description>Recent content on Pivotal Workshop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/demos/bbl-up/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/demos/bbl-up/</guid>
+      <description>Goal Use the bosh bootloader to stand up our control plane (bosh director, concourse, docker hub)
+Director Setup $ mkdir workspace $ cd workspace  Go to here and follow the various instructions in the links
+Also: brew install cloudfoundry/tap/credhub-cli Also: install Fly CLI
+$ mkdir bbl-workshop $ cd bbl-workshop  We will distribute the Azure service account ENVs to everyone. Export them then:
+$ bbl up $ eval &amp;quot;$(bbl print-env)&amp;quot; $ bosh login $ bosh cloud-config  Deploy Concourse Now that we have our bosh director installed, we can deploy the concourse server that will be responsible for pipelining our PCF foundation installations.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/demos/deploy-opsman-pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/demos/deploy-opsman-pipeline/</guid>
+      <description>Goal Utilizing Concourse and PCF Pipelines we are going to configure and deploy OpsMan to a new PCF Foundation.
+PCF Pipelines Download the latest PCF-Pipeline from PivNet. If you can&amp;rsquo;t access this&amp;hellip;raise your hand and wait quietly.
+Extract the .tgz file to our bbl-workshop directory and set our Azure storage container.
+$ export AZURE_STORAGE_ACCOUNT=$(bbl outputs | grep storage_account_name | cut -d &amp;quot; &amp;quot; -f2) $ export AZURE_STORAGE_ACCOUNT_KEY=$(az storage account keys list --account-name $AZURE_STORAGE_ACCOUNT| jq -r .</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/demos/create-bosh-release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/demos/create-bosh-release/</guid>
+      <description>Goal Deploying software systems with BOSH is done with BOSH Releases. Releases abstract code away from the underlying OS and create a specific packing structure all software systems must adhere to. Lets explore what a BOSH Release is by using a very simple release that prints log messages.
+Create the BOSH Release To create the release directory, navigate into the workspace where you want the release to be, and run: - $ bosh init-release --dir &amp;lt;release_name&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/demos/deploy-bosh-release/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/demos/deploy-bosh-release/</guid>
+      <description>Goal Before we can deploy a BOSH release we need to define how the release should be deployed. Do we deploy 3 or 1 instances? Do we give it an IP of 10.0.0.1 or 10.0.0.50? etc&amp;hellip; As you can see there are many different ways to deploy the release. With BOSH we call this definition a BOSH Manifest. Lets create a manifest and deploy our sample-bosh-release.
+Part 1: Create the manifest Using your favorite command-line text editor to create a sample-bosh-manifest.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/demos/example-stemcell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/demos/example-stemcell/</guid>
+      <description>Goal BOSH Stemcells contain both metadata and the raw image. Lets take some time to examine what is contained in the metadata and how a Stemcell is organized.
+Prerequisites  A file archiver to extract files with.
+Windows - 7 Zip
+Mac/Linux - Tar - (Factory Installed)
+ OPTIONAL - VirtualBox to boot a raw VMDK system image.
+  Part 1: Extracting the stemcell image  Download the latest vSphere Stemcell here Extract the downloaded stemcell</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/demos/init/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/demos/init/</guid>
+      <description>Creating Your First Service Broker Get Service Broker Skeleton Project  Install Golang, setup $GOROOT. Golang has great documentation on how to do this here.
+ Create a working directory to store our service broker in. We will use /tmp for the rest of this workshop.
+mkdir -p /tmp/service-broker  Set the working directory($GOPATH) for the go cli.
+export GOPATH=$(pwd)  Get the skeleton service broker code using go get.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/demos/catalog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/demos/catalog/</guid>
+      <description>Adding a Service Catalog We are creating a new plan for Medium hypothetical service
+Extending the Catalog with Medium Plan  Change into the broker source directory
+cd src/github.com/Pivotal-Field-Engineering/service-broker/broker  Open broker.go into your text IDE. All of the service broker logic lives here.
+ Locate the function called Services in broker.go. This function corresponds with the /v2/catalog endpoint.
+ Locate the Plan smallPlan. We see the smallPlan being created as a golang Struct.</description>
+    </item>
+    
+  </channel>
+</rss>

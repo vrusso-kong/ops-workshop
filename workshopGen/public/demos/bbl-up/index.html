@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.51" />
+    <meta name="description" content="">
+
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link rel="icon" href="/images/favicon.png" type="image/x-icon" />
+    <title> :: Pivotal Workshop</title>
+
+    
+    <link href="/css/nucleus.css?1542292529" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1542292529" rel="stylesheet">
+    <link href="/css/hybrid.css?1542292529" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1542292529" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1542292529" rel="stylesheet">
+    <link href="/css/auto-complete.css?1542292529" rel="stylesheet">
+    <link href="/css/theme.css?1542292529" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1542292529" rel="stylesheet">
+    
+
+    <script src="/js/jquery-2.x.min.js?1542292529"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/demos/bbl-up/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="">
+    <svg x="0px" y="0px" width="50%" height="100%" viewBox="0 0 291.93 68.4" xmlns="http://www.w3.org/2000/svg">
+        <g class="cls-1">
+        <path style="fill:#008775;" d="M131.51,61.59H121.14v-10h10.37v10Zm0,57.21h-10.4V69h10.4V118.8Z" transform="translate(-66.72 -51.56)"></path>
+        <path style="fill:#008775;" d="M191.48,69L177,112c-2.49,7-6.92,7.94-10.52,7.94-5.33,0-8.54-2.45-10.44-7.93L144,76.27h-4.77V69h12.45l12.44,40c0.54,1.71.88,2.73,2.39,2.73s1.88-1,2.38-2.73l12.69-40h9.92Z" transform="translate(-66.72 -51.56)"></path>
+        <path style="fill:#008775;" d="M217.08,69c13.45,0,22.83,8.87,22.83,21.59v7.83c0,12.7-9.38,21.59-22.83,21.59s-22.84-8.89-22.84-21.59V90.54c0-12.71,9.4-21.59,22.84-21.59m0,42.8c8,0,13-6.08,13-13.38V90.54c0-7.3-4.94-13.39-13-13.39-8.52,0-13,6.08-13,13.39v7.83c0,7.3,4.7,13.38,13,13.38" transform="translate(-66.72 -51.56)"></path>
+        <path style="fill:#008775;" d="M322.9,70.55a88.57,88.57,0,0,0-19.25-2.3c-13.65,0-22.12,8.61-22.12,22.48v5.46c0,13.86,8.47,22.6,22.12,22.6,0.32,0,2.74,0,3.85-.1v-8.37c-0.42,0-3.54.11-3.85,0.11-7.42,0-12.42-5.72-12.42-14.24V90.73c0-8.52,5-14.24,12.42-14.24a72.93,72.93,0,0,1,10.18.64l0.56,0.12V118.8h10.39V72.27c0-.89,0-1.23-1.89-1.73" transform="translate(-66.72 -51.56)"></path>
+        <rect style="fill:#008775;" height="67.24" width="10.39" x="268.07"></rect>
+        <path style="fill:#008775;" d="M85,51.56H66.72v67.23H77.53V60.91h6.34c1.35,0,2.49.07,3.64,0.09,9.37,0.18,14,3.9,14,11.18,0,0.29,0,.49,0,0.79,0,6.74-3.7,11.21-13.92,11.21-1,0-2,0-3,0,0,2.58,0,7.36,0,9,1.05,0.05,2,.09,3.05.09,14.66,0,25-5.76,25-20.23,0-.28,0-0.58,0-0.87,0-15-11.28-20.64-27.61-20.64" transform="translate(-66.72 -51.56)"></path>
+        <path style="fill:#008775;" d="M258.37,58.21V69h16.93V77H258.37v29c0,4.56,2.91,4.68,7.13,4.68h9.8v8.06H262c-9.81,0-14.18-3.93-14.18-12.74V59.65Z" transform="translate(-66.72 -51.56)"></path>
+        </g>
+        <path style="fill:#008775;" d="M350,114.44a4.34,4.34,0,1,1,4.34,4.36A4.36,4.36,0,0,1,350,114.44Zm4.35-3.75a3.73,3.73,0,1,0,3.71,3.73A3.73,3.73,0,0,0,354.31,110.7Zm-1,6.05h-0.5V112h1.33c1.2,0,1.78.55,1.78,1.43a1.39,1.39,0,0,1-1,1.35l1.22,1.95h-0.6l-1.13-1.83-1.13.07v1.76Zm0.85-2.24a1.09,1.09,0,0,0,1.26-1c0-.67-0.42-1-1.33-1h-0.8v2.07Z" transform="translate(-66.72 -51.56)"></path>
+    </svg>
+    <p>PLATFORM ARCHITECTURE</p>
+  </a>
+  
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-close"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1542292529"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1542292529"></script>
+<script type="text/javascript">
+    
+        var baseurl = "";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1542292529"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics" id="yup">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/workshop/" title="Fiserv/THD OpsMan Deep Dive Workshop" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/workshop/">
+          Fiserv/THD OpsMan Deep Dive Workshop
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/concepts/" title="Concepts" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/concepts/">
+          Concepts
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/demos/" title="Demos" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/demos/">
+          Demos
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/demos/bbl-up/" title="" class="dd-item active">
+        <a href="/demos/bbl-up/">
+        BBL Up
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/demos/deploy-opsman-pipeline/" title="" class="dd-item ">
+        <a href="/demos/deploy-opsman-pipeline/">
+        Deploy OpsMan
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/demos/create-bosh-release/" title="" class="dd-item ">
+        <a href="/demos/create-bosh-release/">
+        Create BOSH Release
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/demos/deploy-bosh-release/" title="" class="dd-item ">
+        <a href="/demos/deploy-bosh-release/">
+        Deploy BOSH Release
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/demos/example-stemcell/" title="" class="dd-item ">
+        <a href="/demos/example-stemcell/">
+        Example Stemcell
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/demos/init/" title="" class="dd-item ">
+        <a href="/demos/init/">
+        Service Broker Init
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/demos/catalog/" title="" class="dd-item ">
+        <a href="/demos/catalog/">
+        Service Broker Catalog
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="/demos/bbl-up/" selected>English</option>
+                    
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <i class="fas fa-heart"></i></a> by <a href="https://pivotal.io">Pivotal</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Pivotal Workshop</a> > <a href='/demos/'>Demos</a> > 
+          
+         
+          
+         
+          
+           
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#goal">Goal</a>
+<ul>
+<li><a href="#director-setup">Director Setup</a></li>
+<li><a href="#deploy-concourse">Deploy Concourse</a></li>
+<li><a href="#register-and-deploy-credhub">Register and Deploy Credhub</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+
+        
+        <div id="body-inner">
+          
+            <h1></h1>
+          
+
+        
+
+
+
+
+<h2 id="goal">Goal</h2>
+
+<p>Use the bosh bootloader to stand up our control plane (bosh director, concourse, docker hub)</p>
+
+<p><img src="concourse-single-plane.png" alt="BOSH Control Plane" title="BOSH Control Plane" /></p>
+
+<h3 id="director-setup">Director Setup</h3>
+
+<pre><code>$ mkdir workspace
+$ cd workspace
+</code></pre>
+
+<p>Go to <a href="https://github.com/cloudfoundry/bosh-bootloader#prerequisites">here</a> and follow the various instructions in the links</p>
+
+<p>Also: <code>brew install cloudfoundry/tap/credhub-cli</code>
+Also: install <a href="https://concourse-ci.org/download.html">Fly CLI</a></p>
+
+<pre><code>$ mkdir bbl-workshop
+$ cd bbl-workshop
+</code></pre>
+
+<p>We will distribute the Azure service account ENVs to everyone. Export them then:</p>
+
+<pre><code>$ bbl up
+$ eval &quot;$(bbl print-env)&quot;
+$ bosh login
+$ bosh cloud-config
+</code></pre>
+
+<h3 id="deploy-concourse">Deploy Concourse</h3>
+
+<p>Now that we have our bosh director installed, we can deploy the concourse server that will be responsible for pipelining our PCF foundation installations.</p>
+
+<pre><code>$ bbl plan --lb-type concourse 
+$ bbl up
+</code></pre>
+
+<p>The BOSH bootloader is very versitile, with a simple switch of the plan we can use it to set up a concourse BOSH deployment. Now we need to configure that instance.</p>
+
+<pre><code>$ bosh upload-stemcell &quot;https://bosh.io/d/stemcells/bosh-azure-hyperv-ubuntu-xenial-go_agent&quot;   
+$ export EXTERNAL_HOST=&quot;$(bbl outputs | grep concourse_lb_ip | cut -d ' ' -f2)&quot;
+</code></pre>
+
+<p>Also notice that as of this moment, we have uploaded two different types of stemcells. We will explore that concept later, probably after lunch, probably.</p>
+
+<pre><code>$ mkdir concourse-deployment
+$ cd concourse-deployment
+</code></pre>
+
+<p>This next step may seem complicated, but we are just using inline commands to generate rather large .yml files without having to fuss with an editor. Simply copy and everything from <code>cat</code> to <code>EOL</code>.</p>
+
+<pre><code>cat &gt; vars.yml &lt;&lt;EOL
+external_host: &quot;${EXTERNAL_HOST}&quot;
+external_url: &quot;https://${EXTERNAL_HOST}&quot;
+network_name: 'private'
+web_network_name: 'private'
+web_vm_type: 'default'
+web_network_vm_extension: 'lb'
+db_vm_type: 'default'
+db_persistent_disk_type: '1GB'
+worker_vm_type: 'default'
+deployment_name: 'concourse'
+uaa_version: '66.0'
+uaa_sha1: '2848d9fb65d2d556a918e8045359cf469c241123'
+main_team_oauth_users: 
+- 'admin'
+EOL
+</code></pre>
+
+<p>One more&hellip;.</p>
+
+<pre><code>cat &gt; credhub.yml &lt;&lt;EOL
+# Add Variables for Passwords
+- type: replace
+  path: /variables?/name=concourse_to_credhub_secret
+  value:
+    name: concourse_to_credhub_secret
+    type: password
+- type: replace
+  path: /variables?/name=credhub_encryption_password
+  value:
+    name: credhub_encryption_password
+    type: password
+
+# Add CredHub Release
+- type: replace
+  path: /releases/-
+  value:
+    name: credhub
+    url: https://bosh.io/d/github.com/pivotal-cf/credhub-release?v=((credhub_version))
+    sha1: ((credhub_sha1))
+    version: ((credhub_version))
+
+# Add CredHub client to UAA
+- type: replace
+  path: /instance_groups/name=web/jobs/name=uaa/properties/uaa/clients?
+  value:
+    credhub_cli:
+      override: true
+      authorized-grant-types: password,refresh_token
+      scope: credhub.read,credhub.write
+      authorities: uaa.resource
+      access-token-validity: 1200
+      refresh-token-validity: 3600
+      secret: &quot;&quot;
+    concourse_to_credhub:
+      override: true
+      authorized-grant-types: client_credentials
+      scope: &quot;&quot;
+      authorities: credhub.read,credhub.write
+      access-token-validity: 30
+      refresh-token-validity: 3600
+      secret: ((concourse_to_credhub_secret))
+
+# Add CredHub Job to Web Instance Group
+- type: replace
+  path: /instance_groups/name=web/jobs/-
+  value:
+    name: credhub
+    release: credhub
+    properties:
+      credhub:
+        port: 8844
+        authorization:
+          acls:
+            enabled: false
+        authentication:
+          uaa:
+            url: &quot;((external_url)):8443&quot;
+            verification_key: ((uaa-jwt.public_key))
+            ca_certs:
+            - ((atc_tls.ca))
+        data_storage:
+          type: postgres
+          database: &amp;credhub_db credhub
+          username: *credhub_db
+          password: &amp;credhub_db_passwd ((credhub_db_password))
+          require_tls: false
+        tls:
+          certificate: ((atc_tls.certificate))
+          private_key: ((atc_tls.private_key))
+        ca_certificate: ((atc_tls.ca))
+        log_level: info
+        encryption:
+          keys:
+            - provider_name: int
+              key_properties:
+                encryption_password: ((credhub_encryption_password))
+              active: true
+          providers:
+          - name: int
+            type: internal
+
+# Add CredHub DB to Postgres job
+- type: replace
+  path: /instance_groups/name=db/jobs/name=postgres/properties/databases/databases/-
+  value:
+    name: *credhub_db
+- type: replace
+  path: /instance_groups/name=db/jobs/name=postgres/properties/databases/roles/-
+  value: 
+    name: *credhub_db
+    password: *credhub_db_passwd
+- type: replace
+  path: /variables?/name=credhub_db_password?
+  value:
+    name: credhub_db_password
+    type: password
+
+# Point ATC to CredHub
+- type: replace
+  path: /instance_groups/name=web/jobs/name=atc/properties/credhub?
+  value:
+    url: ((external_url)):8844
+    client_id: concourse_to_credhub
+    client_secret: ((concourse_to_credhub_secret))
+    tls:
+      ca_cert:
+        certificate: ((atc_tls.ca))
+        insecure_skip_verify: true
+
+# Extend wait times
+- type: replace
+  path: /update/canary_watch_time
+  value: 1000-360000
+- type: replace
+  path: /update/update_watch_time
+  value: 1000-360000
+EOL
+</code></pre>
+
+<p>Now we have our yaml config files. Let&rsquo;s put them to good use.</p>
+
+<pre><code>$ git clone https://github.com/concourse/concourse-bosh-deployment.git  ../../concourse-bosh-deployment
+</code></pre>
+
+<p>This downloads the concourse bosh deployment into directory next to the bbl-workshop</p>
+
+<pre><code>$ pushd ../../concourse-bosh-deployment/cluster
+</code></pre>
+
+<p>If you don&rsquo;t know what <code>pushd</code> and <code>popd</code> do, ask Chris.</p>
+
+<pre><code> bosh deploy -d concourse concourse.yml \
+    -l ../versions.yml \
+    -l ../../bbl-workshop/concourse-deployment/vars.yml \
+    -o operations/add-main-team-oauth-users.yml \
+    -o operations/uaa.yml \
+    -o operations/uaa-generic-oauth-provider.yml \
+    -o ../../bbl-workshop/concourse-deployment/credhub.yml \
+    -o operations/privileged-http.yml \
+    -o operations/privileged-https.yml \
+    -o operations/tls.yml \
+    -o operations/tls-vars.yml \
+    -o operations/web-network-extension.yml
+</code></pre>
+
+<p>Once that&rsquo;s finished use <code>popd</code> to return to our concourse-deployment directory we created a few steps ago and download the concourse manifest.</p>
+
+<pre><code>$ bosh -d concourse manifest &gt; concourse.yml
+</code></pre>
+
+<h3 id="register-and-deploy-credhub">Register and Deploy Credhub</h3>
+
+<pre><code>$ credhub login
+$ export UAA_USERS_ADMIN_KEY=$(credhub find -n uaa_users_admin | head -n 2 | tail -n 1 | cut -d ' ' -f3)
+$ export UAA_USERS_ADMIN_PASSWORD=$(credhub get -n $UAA_USERS_ADMIN_KEY | tail -n 3 | head -n 1 | cut -d ' ' -f2)
+$ echo $UAA_USERS_ADMIN_PASSWORD
+</code></pre>
+
+<p>Copy the password and open <code>https://${EXTERNAL_HOST}</code> to login with admin/<code>$UAA_USERS_ADMIN_PASSWORD</code></p>
+
+<pre><code>$ fly -t bbl-workshop login -c https://${EXTERNAL_HOST} -k
+</code></pre>
+
+<p>Copy / paste this callback to somewhere safe. More cat to EOL copy/paste</p>
+
+<pre><code>cat &gt; hello-credhub.ybml &lt;&lt;EOL
+jobs:
+- name: hello-credhub
+  plan:
+  - do:
+    - task: hello-credhub
+      config:
+        platform: linux
+        image_resource:
+          type: docker-image
+          source:
+            repository: ubuntu
+        run:
+          path: sh
+          args:
+          - -exc
+          - |
+            echo &quot;Hello $WORLD_PARAM&quot;
+      params:
+        WORLD_PARAM: {{hello}}
+EOL
+</code></pre>
+
+<p>Put that one to good use.</p>
+
+<pre><code>$ fly -t bbl-workshop set-pipeline -p hello-credhub -c hello-credhub.yml
+$ fly -t bbl-workshop unpause-pipeline -p hello-credhub
+$ fly -t bbl-workshop trigger-job -j hello-credhub/hello-credhub -w
+</code></pre>
+
+<p>Now we need to set a serious of ENVs. BTW, hope you kept that admin password.</p>
+
+<pre><code>$ env -u CREDHUB_PROXY -u CREDHUB_SERVER -u CREDHUB_CLIENT -u CREDHUB_SECRET -u CREDHUB_CA_CERT bash
+$ credhub login -s https://${EXTERNAL_HOST}:8844 -u admin -p $UAA_USERS_ADMIN_PASSWORD --skip-tls-validation
+$ credhub set -n /concourse/main/hello -t value -v MAIN-CREDHUB
+$ fly -t bbl-workshop trigger-job -j hello-credhub/hello-credhub -w
+</code></pre>
+
+<p>One last override and our work here is done</p>
+
+<pre><code>$ credhub login -s https://$EXTERNAL_HOST:8844 -u admin -p $UAA_USERS_ADMIN_PASSWORD --skip-tls-validation
+$ credhub set -n /concourse/main/hello-credhub/hello -t value -v PIPE-CREDHUB
+$ fly -t bbl-workshop trigger-job -j hello-credhub/hello-credhub -w
+$ exit
+</code></pre>
+
+<p>Also #exit!</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+        
+            <a class="nav nav-prev" href="/demos/" title="Demos"> <i class="fas fa-chevron-left"></i></a>
+        
+        
+            <a class="nav nav-next" href="/demos/deploy-opsman-pipeline/" title="" style="margin-right: 0px;"><i class="fas fa-chevron-right"></i></a>
+        
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1542292529"></script>
+    <script src="/js/perfect-scrollbar.min.js?1542292529"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1542292529"></script>
+    <script src="/js/jquery.sticky.js?1542292529"></script>
+    <script src="/js/featherlight.min.js?1542292529"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1542292529"></script>
+    <script src="/js/highlight.pack.js?1542292529"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom.71422.js?1542292529"></script>
+    <script src="/js/learn.js?1542292529"></script>
+    <script src="/js/hugo-learn.js?1542292529"></script>
+
+    <link href="/mermaid/mermaid.css?1542292529" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1542292529"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

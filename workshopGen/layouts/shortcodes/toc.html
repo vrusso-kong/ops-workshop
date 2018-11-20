@@ -1,0 +1,10 @@
+<ul>
+    {{ range .Site.Pages.ByParam "title" }}
+        {{ if eq .Weight 2}}
+            <h2 style="text-align: center;">Workshop {{ .Title }}</h2>
+            {{range .Pages.ByTitle}}
+                <h3 style="font-size: 1.5rem;"><a href="{{ .Permalink }}">{{ .Params.menutitle }}</a></h3>
+            {{end}}
+        {{ end }}
+    {{ end }}
+</ul>

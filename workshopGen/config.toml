@@ -1,0 +1,34 @@
+
+theme = "hugo-theme-learn"
+
+title = "Pivotal Workshop"
+
+# For search functionality
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[params]
+
+# English is the default language
+defaultContentLanguage = "en"
+# Force to have /en/my-page and /fr/my-page routes, even for default language.
+defaultContentLanguageInSubdir= true
+
+[Languages]
+[Languages.en]
+weight = 1
+languageName = "English"
+
+[Languages.fr]
+weight = 1
+languageName = "Français"
+
+[Languages.pt]
+weight = 1
+languageName = "Português"
+
+[Languages.es]
+weight = 1
+languageName = "Español"
+
+googleAnalytics = "UA-128591522-1"
